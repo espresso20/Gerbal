@@ -56,6 +56,7 @@ g3 "This script will help you to do task on the server with some automation."
 sleep 3
 g3 "Keep in mind it only does what you TELL, it to do ;) "
 ConfirmOrExit
+
 #start with checking uptime!
 sleep 3
 g4 "Checking server uptime..."
