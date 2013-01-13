@@ -28,7 +28,7 @@ function g4() {
         echo -e "${COLOR}${MESSAGE}${RESET}"
 }
 
-# Distplays colorized wrning output
+# Displays colorized wrning output.
 #This keeps a uninformed user from wipeing a good log out.
 #yes to continue no to exit if not sure
 function ConfirmOrExit() {
@@ -84,6 +84,7 @@ g4 "Checking server disk space"
 sleep 2
 df -h
 ConfirmOrExit
+
 sleep 2
 g4 "Checking disk usage for /home directories"
 sleep 1
@@ -105,23 +106,27 @@ sleep 2
 g4 "disk useage print done"
 sleep 1
 ConfirmOrExit
+
 sleep 2
 g4 "checking what ports are open on server!"
 sleep 1
 netstat -tulpn
 sleep 3
 ConfirmOrExit
+
 sleep 2
 g4 "Checking on ping to outside"
 sleep 2
 ping www.google.com -c 5
 sleep 2
 ConfirmOrExit
+
 g4 "checking if westin server answers"
 sleep 2
 ping westin.aero-mmo.org -c 5
 sleep 2
 ConfirmOrExit
+
 g4 "OK now for the fun stuff!!"
 sleep 2
 g4 "running updates to server deb packages"
