@@ -1,4 +1,9 @@
 #!/bin/bash
+###########################################################
+# Gerbal!                                                 #
+###########################################################
+#script to perform basic fuction of unix task.
+
 #Display colorized information output
 function g1() {
         COLOR='\033[01;33m'     # bold yellow
