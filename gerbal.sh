@@ -2,7 +2,10 @@
 ###########################################################
 # Gerbal!                                                 #
 ###########################################################
-#script to perform basic fuction of unix task.
+#script to perform basic fuctions of linux server tasks.
+#Built for Aero servers by monkey
+#still needs lots of work !!
+
 
 #Display colorized information output
 function g1() {
