@@ -1,6 +1,6 @@
 #!/bin/bash
 ###########################################################
-# Gerbal!                                                 #
+# Welcome to Gerbal!                                                 #
 ###########################################################
 #script to perform basic fuctions of linux server tasks.
 #Built for Aero servers by monkey
