@@ -39,7 +39,7 @@ function g4() {
 function ConfirmOrExit() {
         while true
                 do
-                        g2 -n "If your Finished Please confirm for Continuing or Exiting! (y or n) :"
+                        g2 -n "Are you finished?! (y or n) :"
                         read CONFIRM
                         case $CONFIRM in
                         y|Y|YES|yes|Yes) break ;;
@@ -50,7 +50,7 @@ function ConfirmOrExit() {
                         *) g2 "Please enter only y or n to Please the Gerbal"
                         esac
                         done
-                        g1 "Gerbal likes you! $CONFIRM. Continuing ..."
+                        g1 "$CONFIRM. Continuing ..."
 }
 
 function timetoexit() {
