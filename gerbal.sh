@@ -53,6 +53,23 @@ function ConfirmOrExit() {
                         g1 "Gerbal likes you! $CONFIRM. Continuing ..."
 }
 
+function timetoexit() {
+        while true
+                do
+                        g2 -n "The next section will run updated to os and system. Do you wish to proceed with this? (y or n) :"
+                        read CONFIRM
+                        case $CONFIRM in
+                        y|Y|YES|yes|Yes) break ;;
+                        n|N|no|NO|No)
+                        g1 "We are done then!" $CONFIRM
+                        exit
+                        ;;
+                        *) g2 "Please enter only y or n"
+                        esac
+                        done
+                        g1 "starting Aptitude for updates $CONFIRM. Continuing ..."
+}
+
 
 #welcome message
 g3 "Welcome to Gerbal!, a script writen to make YOUR life easier."
@@ -135,6 +152,8 @@ sleep 2
 ConfirmOrExit
 
 g4 "OK now for the fun stuff!!"
+sleep 2
+timetoexit
 sleep 2
 g3 "running updates to server deb packages"
 sleep 2
