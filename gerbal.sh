@@ -73,6 +73,22 @@ function timetoexit() {
                         g1 "starting Aptitude for updates $CONFIRM. Continuing ..."
 }
 
+function debianornot() {
+	while true
+		do
+			g2 -n "Are you running a Debian build? (y or n) :"
+			read CONFIRM
+			case $CONFIRM in
+			y|Y|YES|yes|Yes) break ;;
+			n|N|no|NO|No)
+			g1 "I'm sorry, Gerbal perfers Debian builds at the moment only, Try back later" $CONFIRM
+			exit
+			;;
+			*) g2 "Please enter only y or n"
+			esac
+			done
+			g1 "Starting Updates now $CONFIRM."
+}
 
 #welcome message
 g3 "Welcome to Gerbal!, a script writen to make YOUR life easier."
@@ -155,9 +171,11 @@ sleep 2
 ConfirmOrExit
 
 g4 "OK now for the fun stuff!!"
-sleep 2
+sleep 1
+debianornot
+sleep 1
 timetoexit
-sleep 2
+sleep 1
 g3 "running updates to server deb packages"
 sleep 2
 apt-get update
