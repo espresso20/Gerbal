@@ -5,7 +5,7 @@
 #script to perform basic fuctions of linux server tasks.
 #Built for Aero servers by monkey
 #still needs lots of work !!
-
+#run from root if possible
 
 #Display colorized information output
 function g1() {
