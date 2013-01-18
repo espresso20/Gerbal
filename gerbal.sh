@@ -6,6 +6,7 @@
 #Built for Aero servers by monkey
 #still needs lots of work !!
 #run from root if possible
+#is useing user account other then root remember sudo ;)
 
 #Display colorized information output
 function g1() {
