@@ -1,6 +1,6 @@
 #!/bin/bash
 ###########################################################
-# Welcome to Gerbal!                                                 #
+# Welcome to Gerbal! Where the rodents live               #
 ###########################################################
 #script to perform basic fuctions of linux server tasks.
 #Built for Aero servers by monkey
