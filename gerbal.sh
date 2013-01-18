@@ -14,28 +14,28 @@
 function g1() {
         COLOR='\033[01;33m'     # bold yellow
         RESET='\033[00;00m'     # normal white
-        MESSAGE=${@:-"${RESET}Hold PLEASE !!"}
+        MESSAGE=${@:-"${RESET}Hold PLEASE!"}
         echo -e "${COLOR}${MESSAGE}${RESET}"
 }
 # Display colorized warning output
 function g2() {
         COLOR='\033[01;31m'     # bold red
         RESET='\033[00;00m'     # normal white
-        MESSAGE=${@:-"${RESET}ALL DONE!!"}
+        MESSAGE=${@:-"${RESET}ALL DONE!"}
         echo -e "${COLOR}${MESSAGE}${RESET}"
 }
 # Distplays colorized warning output
 function g3() {
         COLOR='\e[1;32m'        #Bold Green
         RESET='\033[00;00m'     # normal white
-        MESSAGE=${@:-"${RESET}ALL DONE!!"}
+        MESSAGE=${@:-"${RESET}ALL DONE!"}
         echo -e "${COLOR}${MESSAGE}${RESET}"
 }
 # Distplays colorized warning output
 function g4() {
         COLOR='\e[1;32m"'          #Bold Blue
         RESET='\033[00;00m'     #normal white
-        MESSAGE=${@:-"${RESET}ALL DONE!!"}
+        MESSAGE=${@:-"${RESET}ALL DONE!"}
         echo -e "${COLOR}${MESSAGE}${RESET}"
 }
 
