@@ -74,121 +74,104 @@ function timetoexit() {
 }
 
 function debianornot() {
-	while true
-		do
-			g2 -n "Are you running a Debian build? (y or n) :"
-			read CONFIRM
-			case $CONFIRM in
-			y|Y|YES|yes|Yes) break ;;
-			n|N|no|NO|No)
-			g1 "I'm sorry, Gerbal perfers Debian builds at the moment only, Try back later" $CONFIRM
-			exit
-			;;
-			*) g2 "Please enter only y or n"
-			esac
-			done
-			g1 "Starting Updates now $CONFIRM."
+       	while true
+       	       	do
+    		       	g2 -n "Are you running a Debian build? (y or n) :"
+                        read CONFIRM
+                        case $CONFIRM in
+                        y|Y|YES|yes|Yes) break ;;
+                        n|N|no|NO|No)
+                        g1 "I'm sorry, Gerbal perfers Debian builds at the moment only, Try back later" $CONFIRM
+                        exit
+                        ;;
+                        *) g2 "Please enter only y or n"
+                        esac
+                        done
+                        g1 "Starting Updates now $CONFIRM."
 }
 
 #welcome message
 g3 "Welcome to Gerbal!, a script writen to make YOUR life easier."
-sleep 3
+    sleep 3
 g3 "This script will help you to do task on the server with some automation."
-sleep 3
+    sleep 3
 g3 "Keep in mind it only does what you TELL, it to do ;) "
 ConfirmOrExit
 
 #start with checking uptime!
-sleep 3
+    sleep 3
 g4 "Checking server uptime..."
-sleep 1
-uptime
-sleep 1
+        uptime
+    sleep 1
 ConfirmOrExit
 
+#check free memory 
 g4 "Checking free memory..."
-sleep 1
-free -t -m
+        free -t -m
 ConfirmOrExit
 
-sleep 2
+#checking for memory in consumption
 g4 "Checking Memory Usage"
-sleep 1
-egrep -h --color 'Mem|Cache|Swap' /proc/meminfo
-sleep 3
+        egrep -h --color 'Mem|Cache|Swap' /proc/meminfo
 g3 "all done with memory checks!"
-sleep 2
 ConfirmOrExit
 
+#checking diskspace 
 g4 "Checking server disk space"
-sleep 2
-df -h
+        df -h
 ConfirmOrExit
 
-sleep 2
+#checking amount of disk used per user account
 g4 "Checking disk usage for /home directories"
-sleep 1
-g1 "Disk useage on minecraft"
-du -sh /home/minecraft
-sleep 2
-g1 "Disk useage on root"
-du -sh /root
-sleep 2
-g1 "Disk useage on bobmarker"
-du -sh /home/bobmarker
-sleep 2
-g1 "Disk useage on monkey"
-du -sh /home/monkey
-sleep 2
-g1 "Disk useage on andrewph"
-du -sh /home/andrewph
-sleep 2
+g1 "Disk useage on user minecraft"
+        du -sh /home/minecraft
+g1 "Disk useage on user root"
+        du -sh /root
+g1 "Disk useage on user bobmarker"
+        du -sh /home/bobmarker
+g1 "Disk useage on user monkey"
+        du -sh /home/monkey
+g1 "Disk useage on user andrewph"
+        du -sh /home/andrewph
 g4 "disk useage print out done"
-sleep 1
-g4 "read your profile's Disk useage printout, if it seems overly large, please clean up your home dir ;) thx!"
+
+g4 "read your profile's Disk useage printout, if it seems overly large, please consider cleaning up your home directory ;) thx!"
 ConfirmOrExit
 
-sleep 2
+#checking ports open on server
 g4 "checking what ports are open on server!"
-sleep 1
-netstat -tulpn
-sleep 3
-g4 "watch for the Minecraft ports (25565, 25566, ect) and ssh ports (22)."
-sleep 2
+        netstat -tulpn
+    sleep 3
 ConfirmOrExit
 
-sleep 2
 g4 "Checking on ping to outside"
-sleep 2
-ping www.google.com -c 5
-sleep 2
+    sleep 2
+        ping www.google.com -c 5
 ConfirmOrExit
 
-g4 "checking if westin server answers"
-sleep 2
-ping westin.aero-mmo.org -c 5
-sleep 2
-ConfirmOrExit
+#This part is based on debian build for aptitude and apt-get controls
+#will have to be changed if used on a CentOS build
 
 g4 "OK now for the fun stuff!!"
-sleep 1
+
+#run Warning about debian build, if yes continue to next session
 debianornot
-sleep 1
+
+#run warning about apt-get update, if yes continue with updates 
 timetoexit
-sleep 1
+
 g3 "running updates to server deb packages"
-sleep 2
-apt-get update
-sleep 3
+        apt-get update
+
 g3 "running upgrades to server systems from deb packages"
-sleep 2
-apt-get upgrade -y
-sleep 3
+        #insert auto yes for packages updates
+        apt-get upgrade -y
+
 g3 "running aptitude for checksum"
-sleep 2
-aptitude update
-sleep 3
+        #aptitude is better version of apt-get (more control), run both for diff.
+        aptitude update
+
 g3 "updating packages on aptitued recomendation"
-aptitude upgrade -y
-sleep 4
+        #aptitude auto yes
+        aptitude upgrade -y
 ConfirmOrExit
