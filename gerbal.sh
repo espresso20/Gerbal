@@ -7,6 +7,7 @@
 #still needs lots of work !!
 #run from root if possible
 #if useing user account other then root remember sudo ;)
+#Changes coming include automated ip request from user for ping commands.
 
 #Display colorized information output
 function g1() {
