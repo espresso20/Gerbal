@@ -20,5 +20,5 @@ Working with pass attempts
 
 
 
-Copyright 2013 Monkeypuddles for Public-Craft.inc
+Copyright 2013 Monkeypuddles for Public-Craft.inc <br />
 monkeyservers@gmail.com
