@@ -7,7 +7,7 @@ use with care:
 
 -------------------------------------------------------
 Some changes are neccasary to use on a diffrent network
-
+<br />
 
 change server pings to X.X.X.X
 
@@ -17,8 +17,7 @@ use brains to determine Dir for du interface use.
 
 ------------------------------------------------------
 Working with pass attempts
-
-
-
+<br />
+<br />
 Copyright 2013 Monkeypuddles for Public-Craft.inc <br />
 monkeyservers@gmail.com
