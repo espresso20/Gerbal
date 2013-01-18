@@ -18,5 +18,7 @@ use brains to determine Dir for du interface use.
 ------------------------------------------------------
 Working with pass attempts
 
-Copyright 2013 Monkeypuddles for Public-Craft.inc
 
+
+Copyright 2013 Monkeypuddles for Public-Craft.inc
+monkeyservers@gmail.com
