@@ -15,4 +15,8 @@ change du to your local dir for proper du info to occur
 
 use brains to determine Dir for du interface use.
 
--------------------------------------------------------
+------------------------------------------------------
+
+
+Copyright 2013 Monkeypuddles for Public-Craft.inc
+
