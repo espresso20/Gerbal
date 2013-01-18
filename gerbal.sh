@@ -8,6 +8,7 @@
 #run from root if possible
 #if useing user account other then root remember sudo ;)
 #Changes coming include automated ip request from user for ping commands.
+#as well as ability to enter directories for df and du alerts.
 
 #Display colorized information output
 function g1() {
