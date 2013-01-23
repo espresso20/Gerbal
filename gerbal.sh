@@ -137,7 +137,8 @@ continueornot
 
 g4 "Checking on ping to outside"
     sleep 2
-        ping www.google.com -c 5
+        ping www.google.com -c 3
+#added ping alert- can send to mail.
 continueornot
 
 #This part is based on debian build for aptitude and apt-get controls
