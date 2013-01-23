@@ -10,6 +10,10 @@
 #Changes coming include automated ip request from user for ping commands.
 #as well as ability to enter directories for df and du alerts.
 
+
+#wups!
+#ill change that in a bit
+
 #Display colorized information output
 function g1() {
         COLOR='\033[01;33m'     # bold yellow
