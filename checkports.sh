@@ -4,7 +4,7 @@ import socket
 import sys
 
 if ( len(sys.argv) != 2 ):
-    print "Usage: " + sys.argv[0] + " you must enter IP or FQDN"
+    print "Usage: " + sys.argv[0] + " you must enter IP or FQDN along with your command"
     sys.exit(1)
 
 remote_host = sys.argv[1]
