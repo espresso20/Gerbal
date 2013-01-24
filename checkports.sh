@@ -1,4 +1,5 @@
 #!/usr/bin/python
+#use for socket detection, port manipulation, and IP watch.
 
 import socket
 import sys
