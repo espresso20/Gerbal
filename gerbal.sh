@@ -97,24 +97,23 @@ continueornot
     sleep 3
 g4 "Checking server uptime..."
         uptime
-    sleep 1
-continueornot
+    sleep 2
+
 
 #check free memory 
 g4 "Checking free memory..."
         free -t -m
-continueornot
 
 #checking for memory in consumption
 g4 "Checking Memory Usage"
         egrep -h --color 'Mem|Cache|Swap' /proc/meminfo
 g3 "all done with memory checks!"
-continueornot
+sleep 3
 
 #checking diskspace 
 g4 "Checking server disk space"
         df -h
-continueornot
+sleep 1
 
 #checking amount of disk used per user account
 g4 "Checking disk usage for /home directories"
@@ -141,9 +140,9 @@ sleep 1
 	do
   		(echo >/dev/tcp/localhost/$p) >/dev/null 2>&1 && echo "$p open"
 	done
-
-#checking open ports being used on server
-g4 "checking what ports are being used currently on server!"
+sleep 2
+#checking to see what is using the open ports 
+g4 "checking to see that is using the open ports!"
         netstat -tulpn
     sleep 3
 continueornot
