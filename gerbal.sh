@@ -81,6 +81,10 @@ function continueornot() {
                          g1 "Continuing!" $CONFIRM
 }
 
+#testing new idea
+echo "bear with me please"
+
+
 #welcome message
 g3 "Welcome to Gerbal!, a script writen to make YOUR life easier."
     sleep 3
