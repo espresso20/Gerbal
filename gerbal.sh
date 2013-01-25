@@ -133,8 +133,17 @@ g4 "disk useage print out done"
 g4 "read your profile's Disk useage printout, if it seems overly large, please consider cleaning up your home directory ;) thx!"
 continueornot
 
-#checking ports open on server
-g4 "checking what ports are open on server!"
+#checking for open ports
+g4 "checking for range of ports, and if they are open"
+sleep 1
+        echo "Scanning TCP ports..."
+	for p in {1..6000}
+	do
+  		(echo >/dev/tcp/localhost/$p) >/dev/null 2>&1 && echo "$p open"
+	done
+
+#checking open ports being used on server
+g4 "checking what ports are being used currently on server!"
         netstat -tulpn
     sleep 3
 continueornot
