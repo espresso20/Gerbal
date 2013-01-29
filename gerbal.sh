@@ -147,9 +147,14 @@ g4 "checking to see that is using the open ports!"
     sleep 3
 continueornot
 
-g4 "Checking on ping to outside"
-    sleep 2
-        ping www.google.com -c 3
+g4 "Checking on ping to outside or inside"
+    sleep 1
+g4 "enter ip you wish to ping!"
+    echo
+    read PING
+    echo
+    ping $PING -c 5
+       
 #added ping alert- can send to mail.
 continueornot
 
