@@ -16,3 +16,14 @@ for i in $(ls)
 	 du -sh "$i"
 	done | sort -n
 
+
+
+echo testing reading cmd
+
+echo
+echo ping outside source
+read IP
+echo
+ping $IP -w5
+
+
