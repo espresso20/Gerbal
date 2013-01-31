@@ -10,14 +10,14 @@ use with care:
 Some changes are neccasary to use on a diffrent network
 <br />
 
-change server pings to X.X.X.X
+some commands will behave diffrently based on your user level, I would suggest useing #sudo with Gerbal if possible.
 
 change du to your local dir for proper du info to occur
 
-use brains to determine Dir for du interface use.
+use brains to determine Dir for du interface use ;) 
+(ill add a automatic controller soon)
 
 ------------------------------------------------------
-Working with pass attempts, somthing tells me i need to do clean up ^_^.
 <br />
 <br />
 Copyright 2013 Monkeypuddles for Public-Craft.inc <br />
