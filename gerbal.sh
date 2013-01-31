@@ -133,19 +133,29 @@ g4 "read your profile's Disk useage printout, if it seems overly large, please c
 continueornot
 
 #checking for open ports
-g4 "checking for range of ports, and if they are open"
+g4 "checking ports!!"
 sleep 1
         echo "Scanning TCP ports..."
 	for p in {1..6000}
 	do
   		(echo >/dev/tcp/localhost/$p) >/dev/null 2>&1 && echo "$p open"
 	done
-sleep 2
+sleep 1
 #checking to see what is using the open ports 
 g4 "checking to see that is using the open ports!"
         netstat -tulpn
     sleep 3
-continueornot
+
+#lets let the user check a specific port
+
+g4 "check out a custome port"
+    sleep 1
+g4 "enter the port you want to try"
+    echo
+    read PORT
+    echo
+    (echo >/dev/tcp/localhost/$PORT) >/dev/null 2>&1 && echo "$PORT open"
+
 
 g4 "Checking on ping to outside or inside"
     sleep 1
