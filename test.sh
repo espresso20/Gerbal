@@ -26,4 +26,4 @@ read IP
 echo
 ping $IP -w5
 
-
+#
