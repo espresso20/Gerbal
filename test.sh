@@ -18,6 +18,14 @@ for i in $(ls)
 
 
 
+testing push commits
+
+
+
+
+
+
+
 echo testing reading cmd
 
 echo
