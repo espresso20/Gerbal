@@ -12,7 +12,7 @@ Some changes are neccasary to use on a diffrent network
 
 some commands will behave diffrently based on your user level, I would suggest useing #sudo with Gerbal if possible.
 
-change du to your local dir for proper du info to occur
+
 
 use brains to determine Dir for du interface use ;) 
 (ill add a automatic controller soon)
