@@ -44,6 +44,19 @@ echo "
 
 }
 
+groups | grep -q eng && ENG="yes"
 
-	
+if [ ! "$ENG" = "yes" ]; then
+	gerbal2
+fi
 
+echo "Gerbal Commands"
+
+
+while true
+do
+cmd
+done
+
+
+###############################################
