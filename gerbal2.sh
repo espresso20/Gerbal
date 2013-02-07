@@ -1,7 +1,9 @@
 #!/bin/bash
+#creating basic menu driven options for commands
+#more for my curiostity then for any practical reason
+
 
 # Global Varibles
-TEMPDIR="/tmp/"
 DATE_FORMAT="%Y%m%d"
 WEEK=`date +%V`
 CMDLIST="`date -u "+"$DATE_FORMAT" @%H%MUTC"` W$WEEK =>todo cmd1 cmd2 ?>"
@@ -43,20 +45,20 @@ echo "
 "
 
 }
-
-groups | grep -q eng && ENG="yes"
-
-if [ ! "$ENG" = "yes" ]; then
-	gerbal2
-fi
-
-echo "Gerbal Commands"
-
-
-while true
-do
-cmd
-done
+#still working this part
+#groups | grep -q eng && ENG="yes"
+#if [ ! "$ENG" = "yes" ]; then
+#
+#	gerbal2
+#fi
+#
+#echo "Gerbal Commands"
+#
+#
+#while true
+#do
+#cmd
+#done
 
 
 ###############################################
