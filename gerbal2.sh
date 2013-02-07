@@ -6,7 +6,7 @@
 # Global Varibles
 DATE_FORMAT="%Y%m%d"
 WEEK=`date +%V`
-CMDLIST="`date -u "+"$DATE_FORMAT" @%H%MUTC"` W$WEEK =>todo cmd1 cmd2 ?>"
+CMDLIST="`date -u "+"$DATE_FORMAT" @%H%MUTC"` W$WEEK =>pinghost todo cmd1 cmd2 ?>"
 VERSION="v0.9.4.20090306"
 
 ##########################################################
@@ -29,7 +29,7 @@ echo "
 	com1		somecommand explanation
 	com2		somecommand explanation
 	todo		list out todos
-
+	pinghost	pings given host
 ==========================================================================================================
 "
 
@@ -45,9 +45,26 @@ echo "
 "
 
 }
+
+#######
+# cmdname="ph"
+pinghost)
+#ping given host
+####################
+echo "enter ip you wish to ping!"
+    echo
+    read PING
+    echo
+    ping $PING -c 5
+cmd;;
+
+
+
+
+
 #still working this part
 #groups | grep -q eng && ENG="yes"
-#if [ ! "$ENG" = "yes" ]; then
+#if [ ! "$ENG" = "yes" ]; then	
 #
 #	gerbal2
 #fi
