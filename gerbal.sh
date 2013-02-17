@@ -11,9 +11,6 @@
 #as well as ability to enter directories for df and du alerts.
 
 
-#wups!
-#ill change that in a bit
-
 #Display colorized information output
 function g1() {
         COLOR='\033[01;33m'     # bold yellow
@@ -23,27 +20,33 @@ function g1() {
 }
 # Display colorized warning output
 function g2() {
+	#add color to text
         COLOR='\033[01;31m'     # bold red
+        #after message reset color pallete to white
         RESET='\033[00;00m'     # normal white
+	#print message
         MESSAGE=${@:-"${RESET}ALL DONE!"}
+	#show results
         echo -e "${COLOR}${MESSAGE}${RESET}"
 }
+
 # Distplays colorized warning output
 function g3() {
         COLOR='\e[1;32m'        #Bold Green
-        RESET='\033[00;00m'     # normal white
-        MESSAGE=${@:-"${RESET}ALL DONE!"}
-        echo -e "${COLOR}${MESSAGE}${RESET}"
-}
-# Distplays colorized warning output
-function g4() {
-        COLOR='\e[1;32m"'          #Bold Blue
         RESET='\033[00;00m'     #normal white
         MESSAGE=${@:-"${RESET}ALL DONE!"}
         echo -e "${COLOR}${MESSAGE}${RESET}"
 }
 
-# Displays colorized wrning output.
+# Distplays colorized warning output
+function g4() {
+        COLOR='\e[1;32m"'       #Bold Blue
+        RESET='\033[00;00m'     #normal white
+        MESSAGE=${@:-"${RESET}ALL DONE!"}
+        echo -e "${COLOR}${MESSAGE}${RESET}"
+}
+
+#Displays colorized wrning output.
 #This keeps a uninformed user from wipeing a good log out.
 #yes to continue no to exit if not sure
 function ConfirmOrExit() {
@@ -81,23 +84,19 @@ function continueornot() {
                          g1 "Continuing!" $CONFIRM
 }
 
-#testing new idea
-echo "bear with me please"
-
-
 #welcome message
 g3 "Welcome to Gerbal!, a script writen to make YOUR life easier."
-    sleep 3
+    sleep 2
 g3 "This script will help you to do task on the server with some automation."
-    sleep 3
+    sleep 2
 g3 "Keep in mind it only does what you TELL, it to do ;) "
 continueornot
 
 #start with checking uptime!
-    sleep 3
+    sleep 1
 g4 "Checking server uptime..."
         uptime
-    sleep 2
+    sleep 1
 
 
 #check free memory 
@@ -108,7 +107,7 @@ g4 "Checking free memory..."
 g4 "Checking Memory Usage"
         egrep -h --color 'Mem|Cache|Swap' /proc/meminfo
 g3 "all done with memory checks!"
-    sleep 3
+    sleep 1
 
 #checking diskspace 
 g4 "Checking server disk space"
@@ -122,7 +121,7 @@ g4 "Enter the directory you wish to see Disk usage on"
     echo
     read DU
     echo
-    du -sh $DU
+    	du -sh $DU
 
 g4 "disk useage print out done"
 g4 "read your profile's Disk useage printout, if it seems overly large, please consider cleaning up your home directory ;) thx!"
@@ -160,7 +159,7 @@ g4 "enter the port you want to try"
     echo
     read PORT
     echo
-    (echo >/dev/tcp/localhost/$PORT) >/dev/null 2>&1 && echo "$PORT open"
+    	(echo >/dev/tcp/localhost/$PORT) >/dev/null 2>&1 && echo "$PORT open"
 
 
 g4 "Checking on ping to outside or inside"
@@ -169,7 +168,7 @@ g4 "enter ip you wish to ping!"
     echo
     read PING
     echo
-    ping $PING -c 5
+    	ping $PING -c 5 #change this number if you want longer or shorter ping loops
        
 #added ping alert- can send to mail.
 continueornot
@@ -177,7 +176,14 @@ continueornot
 #This part is based on debian build for aptitude and apt-get controls
 #will have to be changed if used on a CentOS build
 
-g4 "OK now for the fun stuff!!"
+g4 "Now we will be running upgrades to your system"
+
+#find out what kernel version is
+echo 'here is your kernal, os version'
+    sleep 1
+	uname -a
+
+
 
 #asks if you have a debain kernal installed, if not; exits
 function debianornot() {
