@@ -123,18 +123,21 @@ g4 "Enter the directory you wish to see Disk usage on"
     read DU
     echo
     du -sh $DU
-
-#checking amount of disk used per user account
-g4 "Checking disk usage for /home directories"
-g1 "Disk useage on user root"
-        du -sh /root
 g4 "disk useage print out done"
-
 g4 "read your profile's Disk useage printout, if it seems overly large, please consider cleaning up your home directory ;) thx!"
+#checking amount of disk used per user account
+#g4 "Checking disk usage for /home directories"
+#g1 "Disk useage on user root"
+#        du -sh /root
+#g4 "disk useage print out done"
+#
+#g4 "read your profile's Disk useage printout, if it seems overly large, please consider cleaning up your home directory ;) thx!"
 continueornot
 
 #checking for open ports
-g4 "checking ports!!"
+g4 "Lets check our ports now!!"
+    sleep 1
+g4 "Checking ports!!"
 sleep 1
         echo "Scanning TCP ports..."
 	for p in {1..6000}
