@@ -114,19 +114,20 @@ sleep 3
 g4 "Checking server disk space"
         df -h
 sleep 1
+#building new du 
+g4 "check out disk usage"
+g4 "Enter the directory you wish to see Disk usage on"
+
+    sleep 1
+    echo
+    read DU
+    echo
+    du -sh $DU
 
 #checking amount of disk used per user account
 g4 "Checking disk usage for /home directories"
-g1 "Disk useage on user minecraft"
-        du -sh /home/minecraft
 g1 "Disk useage on user root"
         du -sh /root
-g1 "Disk useage on user bobmarker"
-        du -sh /home/bobmarker
-g1 "Disk useage on user monkey"
-        du -sh /home/monkey
-g1 "Disk useage on user andrewph"
-        du -sh /home/andrewph
 g4 "disk useage print out done"
 
 g4 "read your profile's Disk useage printout, if it seems overly large, please consider cleaning up your home directory ;) thx!"
