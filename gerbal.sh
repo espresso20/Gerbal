@@ -108,21 +108,22 @@ g4 "Checking free memory..."
 g4 "Checking Memory Usage"
         egrep -h --color 'Mem|Cache|Swap' /proc/meminfo
 g3 "all done with memory checks!"
-sleep 3
+    sleep 3
 
 #checking diskspace 
 g4 "Checking server disk space"
         df -h
-sleep 1
+    sleep 1
 #building new du 
 g4 "check out disk usage"
 g4 "Enter the directory you wish to see Disk usage on"
-
     sleep 1
+
     echo
     read DU
     echo
     du -sh $DU
+
 g4 "disk useage print out done"
 g4 "read your profile's Disk useage printout, if it seems overly large, please consider cleaning up your home directory ;) thx!"
 #checking amount of disk used per user account
@@ -138,13 +139,14 @@ continueornot
 g4 "Lets check our ports now!!"
     sleep 1
 g4 "Checking ports!!"
-sleep 1
+    sleep 1
+
         echo "Scanning TCP ports..."
 	for p in {1..6000}
 	do
   		(echo >/dev/tcp/localhost/$p) >/dev/null 2>&1 && echo "$p open"
 	done
-sleep 1
+    sleep 1
 #checking to see what is using the open ports 
 g4 "checking to see that is using the open ports!"
         netstat -tulpn
