@@ -87,14 +87,23 @@ function continueornot() {
 #welcome message
 g3 "Welcome to Gerbal!, a script writen to make YOUR life easier."
     sleep 2
-#lets be polite and give a date
-Today="`date`"
-	echo Today is $Today
-    sleep 1
 g3 "This script will help you to do task on the server with some automation."
     sleep 2
 g3 "Keep in mind it only does what you TELL, it to do ;) "
 
+#lets be polite and give a date
+Today="`date`"
+        echo Today is $Today
+    sleep 1
+
+#and a calendar!
+Cal="`cal`"
+	echo The Calendar says $CAL
+    sleep 1
+
+#we will also check the last few logins for secureity purposes!
+last $USER | head -6
+    sleep 1
 
 #start with checking uptime!
     sleep 1
