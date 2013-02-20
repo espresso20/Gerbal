@@ -101,7 +101,7 @@ Cal="`cal`"
 	echo The Calendar says $CAL
     sleep 1
 
-#we will also check the last few logins for secureity purposes!
+#we will also check the last few logins for security purposes!
 last $USER | head -6
     sleep 1
 
