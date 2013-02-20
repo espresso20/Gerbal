@@ -90,7 +90,7 @@ g3 "Welcome to Gerbal!, a script writen to make YOUR life easier."
 g3 "This script will help you to do task on the server with some automation."
     sleep 2
 g3 "Keep in mind it only does what you TELL, it to do ;) "
-continueornot
+
 
 #start with checking uptime!
     sleep 1
