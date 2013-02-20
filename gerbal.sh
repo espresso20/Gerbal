@@ -87,6 +87,10 @@ function continueornot() {
 #welcome message
 g3 "Welcome to Gerbal!, a script writen to make YOUR life easier."
     sleep 2
+#lets be polite and give a date
+Today="`date`"
+	echo Today is $Today
+    sleep 1
 g3 "This script will help you to do task on the server with some automation."
     sleep 2
 g3 "Keep in mind it only does what you TELL, it to do ;) "
@@ -146,8 +150,9 @@ g4 "Checking ports!!"
   		(echo >/dev/tcp/localhost/$p) >/dev/null 2>&1 && echo "$p open"
 	done
     sleep 1
+
 #checking to see what is using the open ports 
-g4 "checking to see that is using the open ports!"
+g4 "checking to see what is using the open ports!"
         netstat -tulpn
     sleep 3
 
